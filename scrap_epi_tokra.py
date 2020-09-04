@@ -2,7 +2,7 @@ import requests
 import bs4
 import re
 
-pages_episodes_S10_SG1 = [
+pages_episodes_tokra = [
     'https://www.stargate-fusion.com/sg1/episodes/23/202_la-tete-a-l-envers.html',
     'https://www.stargate-fusion.com/sg1/episodes/32/211_la-tok-ra-1-2.html',
     'https://www.stargate-fusion.com/sg1/episodes/33/212_la-tok-ra-2-2.html',
@@ -36,28 +36,28 @@ pages_episodes_S10_SG1 = [
     'https://www.stargate-fusion.com/sg1/episodes/203/816_la-derniere-chance-1-2.html',
     'https://www.stargate-fusion.com/sg1/episodes/204/817_la-derniere-chance-2-2.html',
     'https://www.stargate-fusion.com/sg1/episodes/205/818_pour-la-vie.html']
-data_S10_SG1 = []
-for page_episode_S10_SG1 in pages_episodes_S10_SG1 :
-    ep_S10_SG1 = []
-    response_S10_SG1 = requests.get(page_episode_S10_SG1)
-    soup_S10_SG1 = bs4.BeautifulSoup(response_S10_SG1.text, 'html.parser')
-    info_epi_S10_SG1 = soup_S10_SG1.find_all("font")
-    for epi_S10_SG1 in info_epi_S10_SG1 :
-        ep_S10_SG1.append(epi_S10_SG1.next_sibling)
-    data_S10_SG1.append(ep_S10_SG1)
-#print(data_S10_SG1)
+data_tokra = []
+for page_episode_tokra in pages_episodes_tokra :
+    ep_tokra = []
+    response_tokra = requests.get(page_episode_tokra)
+    soup_tokra = bs4.BeautifulSoup(response_tokra.text, 'html.parser')
+    info_epi_tokra = soup_tokra.find_all("font")
+    for epi_tokra in info_epi_tokra :
+        ep_tokra.append(epi_tokra.next_sibling)
+    data_tokra.append(ep_tokra)
+#print(data_tokra)
 
-episodes_S10_SG1 = []
-for d_S10_SG1 in data_S10_SG1 :    
-    episode_S10_SG1 = {
-        'titre' : d_S10_SG1[0],
-        'numero' : d_S10_SG1[1],
-        'date de diffusion' : d_S10_SG1[2],
-        'audience_us' : d_S10_SG1[3],
-        'audience_fr' : d_S10_SG1[4],
-        'scenariste' : d_S10_SG1[5],
-        'realisateur' : d_S10_SG1[6]
+episodes_tokra = []
+for d_tokra in data_tokra :    
+    episode_tokra = {
+        'titre' : d_tokra[0],
+        'numero' : d_tokra[1],
+        'date de diffusion' : d_tokra[2],
+        'audience_us' : d_tokra[3],
+        'audience_fr' : d_tokra[4],
+        'scenariste' : d_tokra[5],
+        'realisateur' : d_tokra[6]
         }
-    episodes_S10_SG1.append(episode_S10_SG1)
-print(episodes_S10_SG1)
+    episodes_tokra.append(episode_tokra)
+print(episodes_tokra)
 
