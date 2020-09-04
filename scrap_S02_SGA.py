@@ -40,6 +40,7 @@ for d_S02_SGA in data_S02_SGA :
     episode_S02_SGA = {
         'titre' : d_S02_SGA[0],
         'numero' : d_S02_SGA[1],
+        'date de diffusion' : d_S02_SGA[2],
         'audience_us' : d_S02_SGA[3],
         'audience_fr' : d_S02_SGA[4],
         'scenariste' : d_S02_SGA[5],

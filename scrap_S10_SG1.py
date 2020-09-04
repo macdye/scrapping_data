@@ -46,6 +46,7 @@ for d_S10_SG1 in data_S10_SG1 :
     episode_S10_SG1 = {
         'titre' : d_S10_SG1[0],
         'numero' : d_S10_SG1[1],
+        'date de diffusion' : d_S10_SG1[2],
         'audience_us' : d_S10_SG1[3],
         'audience_fr' : d_S10_SG1[4],
         'scenariste' : d_S10_SG1[5],
