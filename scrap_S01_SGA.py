@@ -2,7 +2,6 @@ import requests
 import bs4
 import re
 
-
 pages_episodes_S01_SGA = [
     'https://www.stargate-fusion.com/atlantis/episodes/166/101_une-nouvelle-ere-1-2.html',
     'https://www.stargate-fusion.com/atlantis/episodes/167/102_une-nouvelle-ere-2-2.html',

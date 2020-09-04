@@ -2,7 +2,6 @@ import requests
 import bs4
 import re
 
-
 pages_episodes_S02_SGA = [
     'https://www.stargate-fusion.com/atlantis/episodes/262/301_menace-sur-la-terre.html',
     'https://www.stargate-fusion.com/atlantis/episodes/263/302_transformation.html',
