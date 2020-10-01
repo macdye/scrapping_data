@@ -28,15 +28,15 @@ for page_episode_baal in pages_episodes_baal :
 #print(data_baal)
 
 episodes_baal = []
-for d_baal in data_baal :    
+for d_baal in data_baal :
     episode_baal = {
-        'titre' : d_baal[0],
-        'numero' : d_baal[1],
-        'date de diffusion' : d_baal[2],
+        'title': d_baal[0],
+        'epi_num': d_baal[1],
+        'diffusion_date': d_baal[2],
         'audience_us' : d_baal[3],
         'audience_fr' : d_baal[4],
-        'scenariste' : d_baal[5],
-        'realisateur' : d_baal[6]
+        'scenarist' : d_baal[5],
+        'director': d_baal[6]
         }
     episodes_baal.append(episode_baal)
 print(episodes_baal)

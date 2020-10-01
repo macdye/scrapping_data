@@ -27,15 +27,15 @@ for page_episode_todd in pages_episodes_todd :
 #print(data_todd)
 
 episodes_todd = []
-for d_todd in data_todd :    
+for d_todd in data_todd :
     episode_todd = {
-        'titre' : d_todd[0],
-        'numero' : d_todd[1],
-        'date de diffusion' : d_todd[2],
+        'title': d_todd[0],
+        'epi_num': d_todd[1],
+        'diffusion_date': d_todd[2],
         'audience_us' : d_todd[3],
         'audience_fr' : d_todd[4],
-        'scenariste' : d_todd[5],
-        'realisateur' : d_todd[6]
+        'scenarist' : d_todd[5],
+        'director': d_todd[6]
         }
     episodes_todd.append(episode_todd)
 print(episodes_todd)

@@ -35,15 +35,15 @@ for page_episode_S01_SGA in pages_episodes_S01_SGA :
 #print(data_S01_SGA)
 
 episodes_S01_SGA = []
-for d_S01_SGA in data_S01_SGA :    
+for d_S01_SGA in data_S01_SGA :
     episode_S01_SGA = {
-        'titre' : d_S01_SGA[0],
-        'numero' : d_S01_SGA[1],
-        'date de diffusion' : d_S01_SGA[2],
+        'title': d_S01_SGA[0],
+        'epi_num': d_S01_SGA[1],
+        'diffusion_date': d_S01_SGA[2],
         'audience_us' : d_S01_SGA[3],
         'audience_fr' : d_S01_SGA[4],
-        'scenariste' : d_S01_SGA[5],
-        'realisateur' : d_S01_SGA[6]
+        'scenarist' : d_S01_SGA[5],
+        'director': d_S01_SGA[6]
         }
     episodes_S01_SGA.append(episode_S01_SGA)
 print(episodes_S01_SGA)

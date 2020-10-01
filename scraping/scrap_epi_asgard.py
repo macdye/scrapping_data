@@ -33,15 +33,15 @@ for page_episode_asgard in pages_episodes_asgard :
 #print(data_asgard)
 
 episodes_asgard = []
-for d_asgard in data_asgard :    
+for d_asgard in data_asgard :
     episode_asgard = {
-        'titre' : d_asgard[0],
-        'numero' : d_asgard[1],
-        'date de diffusion' : d_asgard[2],
+        'title': d_asgard[0],
+        'epi_num': d_asgard[1],
+        'diffusion_date': d_asgard[2],
         'audience_us' : d_asgard[3],
         'audience_fr' : d_asgard[4],
-        'scenariste' : d_asgard[5],
-        'realisateur' : d_asgard[6]
+        'scenarist' : d_asgard[5],
+        'director': d_asgard[6]
         }
     episodes_asgard.append(episode_asgard)
 print(episodes_asgard)

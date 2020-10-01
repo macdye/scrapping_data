@@ -48,15 +48,15 @@ for page_episode_tokra in pages_episodes_tokra :
 #print(data_tokra)
 
 episodes_tokra = []
-for d_tokra in data_tokra :    
+for d_tokra in data_tokra :
     episode_tokra = {
-        'titre' : d_tokra[0],
-        'numero' : d_tokra[1],
-        'date de diffusion' : d_tokra[2],
+        'title': d_tokra[0],
+        'epi_num': d_tokra[1],
+        'diffusion_date': d_tokra[2],
         'audience_us' : d_tokra[3],
         'audience_fr' : d_tokra[4],
-        'scenariste' : d_tokra[5],
-        'realisateur' : d_tokra[6]
+        'scenarist' : d_tokra[5],
+        'director': d_tokra[6]
         }
     episodes_tokra.append(episode_tokra)
 print(episodes_tokra)

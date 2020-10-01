@@ -35,15 +35,15 @@ for page_episode_S09_SG1 in pages_episodes_S09_SG1 :
 #print(data_S09_SG1)
 
 episodes_S09_SG1 = []
-for d_S09_SG1 in data_S09_SG1 :    
+for d_S09_SG1 in data_S09_SG1 :
     episode_S09_SG1 = {
-        'titre' : d_S09_SG1[0],
-        'numero' : d_S09_SG1[1],
-        'date de diffusion' : d_S09_SG1[2],
+        'title': d_S09_SG1[0],
+        'epi_num': d_S09_SG1[1],
+        'diffusion_date': d_S09_SG1[2],
         'audience_us' : d_S09_SG1[3],
         'audience_fr' : d_S09_SG1[4],
-        'scenariste' : d_S09_SG1[5],
-        'realisateur' : d_S09_SG1[6]
+        'scenarist' : d_S09_SG1[5],
+        'director': d_S09_SG1[6]
         }
     episodes_S09_SG1.append(episode_S09_SG1)
 print(episodes_S09_SG1)
