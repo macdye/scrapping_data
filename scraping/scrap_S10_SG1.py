@@ -40,8 +40,8 @@ for d_S10_SG1 in data_S10_SG1 :
         'title' : d_S10_SG1[0],
         'epi_num' : d_S10_SG1[1],
         'diffusion_date' : d_S10_SG1[2],
-        'audiences_us' : d_S10_SG1[3],
-        'audiences_fr' : d_S10_SG1[4],
+        'audience_us' : d_S10_SG1[3],
+        'audience_fr' : d_S10_SG1[4],
         'scenarist' : d_S10_SG1[5],
         'director' : d_S10_SG1[6]
         }
