@@ -60,6 +60,8 @@ df_S09_SG1
 
 # %%
 df_S09_SG1['audience_fr'] = df_S09_SG1['audience_fr'].apply(lambda x: x.replace('Indisponible.', 'NA'))
+df_S09_SG1['director'] = df_S09_SG1['director'].apply(lambda x: x.replace('William Warring', 'William Waring'))
+df_S09_SG1['director'] = df_S09_SG1['director'].apply(lambda x: x.replace('And Mikita', 'Andy Mikita'))
 df_S09_SG1
 
 
