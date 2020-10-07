@@ -1,12 +1,7 @@
 import pandas.io.sql
 import sqlalchemy
 
-from S10_SG1_pd import df_episodes_S10_SG1
-from S09_SG1_pd import df_episodes_S09_SG1
-from S08_SG1_pd import df_S08_SG1
-
 def drop_index(my_df):
-  #idx = my_df.get_index()
   my_df.reset_index(drop=True, inplace=True)
 
 sql_engine = sqlalchemy.create_engine("postgres://adytqcrkolageu:97a16fa1a6d9bf1cbe925bcfe86d53fbac12d2a8acec3dcb4f88860a9c14a3cb@ec2-52-48-65-240.eu-west-1.compute.amazonaws.com:5432/d4cd6ggafr9d27")

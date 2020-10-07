@@ -16,7 +16,7 @@ pages_episodes_S03_SGA = [
     'https://www.stargate-fusion.com/atlantis/episodes/285/311_exil-force-2-2.html',
     'https://www.stargate-fusion.com/atlantis/episodes/288/312_le-chant-des-baleines.html',
     'https://www.stargate-fusion.com/atlantis/episodes/286/313_invincible.html',
-    'https://www.stargate-fusion.com/atlantis/episodes/289/314_le-peril-de-la-sagesse.html'
+    'https://www.stargate-fusion.com/atlantis/episodes/289/314_le-peril-de-la-sagesse.html',
     'https://www.stargate-fusion.com/atlantis/episodes/290/315_les-jeux-sont-faits.html',
     'https://www.stargate-fusion.com/atlantis/episodes/291/316_ames-en-detresse.html',
     'https://www.stargate-fusion.com/atlantis/episodes/287/317_une-question-d-ethique.html',

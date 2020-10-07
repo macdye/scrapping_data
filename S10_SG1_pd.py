@@ -23,7 +23,7 @@ df_S10_SG1
 df_S10_SG1['audience_us'] = df_S10_SG1['audience_us'].apply(lambda x: x.replace(' millions', ''))
 df_S10_SG1['audience_us'] = df_S10_SG1['audience_us'].apply(lambda x: x.replace(',', '.'))
 df_S10_SG1['diffusion_date'] = df_S10_SG1['diffusion_date'].apply(lambda x: x.replace('\n', ''))
-df_S10_SG1.astype({'audience_us':'float'})
+df_S10_SG1.astype({'audience_us': float})
 df_S10_SG1
 
 
