@@ -41,7 +41,7 @@ df_S03_SGA['day'] = df_S03_SGA['diffusion_date'].apply(lambda x: x.split(' ')[0]
 df_S03_SGA['month'] = df_S03_SGA['diffusion_date'].apply(lambda x: x.split(' ')[1]).map(month_list)
 df_S03_SGA['year'] = df_S03_SGA['diffusion_date'].apply(lambda x: x.split(' ')[2])
 df_S03_SGA['diffusion_date'] = pd.to_datetime(df_S03_SGA[['year', 'month', 'day']])
-df_S03_SGA
+df_S03_SGA['director'] = df_S03_SGA['director'].apply(lambda x: x.replace('Will Waring', 'William Waring'))
 
 
 # %%
@@ -49,3 +49,5 @@ df_S03_SGA.insert(0, 'serie', 'Stargate Atlantis')
 df_S03_SGA
 
 
+
+# %%
