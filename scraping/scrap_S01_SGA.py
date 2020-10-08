@@ -46,4 +46,4 @@ for d_S01_SGA in data_S01_SGA :
         'director': d_S01_SGA[6]
         }
     episodes_S01_SGA.append(episode_S01_SGA)
-print(episodes_S01_SGA)
+#print(episodes_S01_SGA)

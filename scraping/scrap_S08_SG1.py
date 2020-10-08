@@ -46,4 +46,4 @@ for d_S08_SG1 in data_S08_SG1 :
         'director' : d_S08_SG1[6]
         }
     episodes_S08_SG1.append(episode_S08_SG1)
-print(episodes_S08_SG1)
+#print(episodes_S08_SG1)

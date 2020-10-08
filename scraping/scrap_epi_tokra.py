@@ -59,5 +59,5 @@ for d_tokra in data_tokra :
         'director': d_tokra[6]
         }
     episodes_tokra.append(episode_tokra)
-print(episodes_tokra)
+#print(episodes_tokra)
 

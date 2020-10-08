@@ -24,3 +24,18 @@ df_stargate
 # %%
 df_stargate = df_stargate.append(df_S03_SGA).reset_index(drop=True)
 df_stargate
+
+#%%
+df_series = df_stargate['serie']
+df_series = df_series.drop_duplicates().reset_index(drop=True).rename('name')
+df_series
+
+# %%
+df_diffusion_dates = df_stargate['diffusion_date']
+df_diffusion_dates = df_diffusion_dates.drop_duplicates().sort_values().reset_index(drop=True).rename('date')
+df_diffusion_dates
+# %%
+df_directors = df_stargate['director']
+df_directors = df_directors.drop_duplicates().sort_values().reset_index(drop=True)
+df_directors
+# %%

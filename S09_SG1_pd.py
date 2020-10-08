@@ -61,10 +61,3 @@ df_S09_SG1
 # %%
 df_S09_SG1['audience_fr'] = df_S09_SG1['audience_fr'].apply(lambda x: x.replace('Indisponible.', 'NA'))
 df_S09_SG1
-
-
-# %%
-df_episodes_S09_SG1 = df_S09_SG1[['serie', 'title', 'epi_num']]
-df_episodes_S09_SG1
-
-

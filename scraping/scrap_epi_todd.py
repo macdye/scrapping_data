@@ -38,4 +38,4 @@ for d_todd in data_todd :
         'director': d_todd[6]
         }
     episodes_todd.append(episode_todd)
-print(episodes_todd)
+#print(episodes_todd)

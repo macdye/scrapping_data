@@ -44,5 +44,5 @@ for d_asgard in data_asgard :
         'director': d_asgard[6]
         }
     episodes_asgard.append(episode_asgard)
-print(episodes_asgard)
+#print(episodes_asgard)
 

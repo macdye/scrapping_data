@@ -39,4 +39,4 @@ for d_baal in data_baal :
         'director': d_baal[6]
         }
     episodes_baal.append(episode_baal)
-print(episodes_baal)
+#print(episodes_baal)

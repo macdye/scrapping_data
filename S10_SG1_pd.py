@@ -63,26 +63,17 @@ df_S10_SG1
 df_S10_SG1['audience_fr'] = df_S10_SG1['audience_fr'].apply(lambda x: x.replace('Indisponible.', 'NA'))
 df_S10_SG1
 
-
-# %%
-df_episodes_S10_SG1 = df_S10_SG1[['title', 'epi_num', 'audience_us', 'audience_fr']]
-df_episodes_S10_SG1
-
-
-# %%
-df_scenarist_S10_SG1 = df_S10_SG1['scenarist']
-df_scenarist_S10_SG1
-
-# %%
-df_diffusion_S10_SG1 = df_S10_SG1['diffusion_date']
-df_diffusion_S10_SG1
+#%%
+# df_S10_SG1['director'] = df_S10_SG1['director'].apply(lambda x: x.replace('And', 'Andy'))
+# df_S10_SG1['director'] = df_S10_SG1['director'].apply(lambda x: x.replace('Woeste', 'F. Woeste'))
+# df_S10_SG1['director'] = df_S10_SG1['director'].apply(lambda x: x.replace('Will', 'William'))
+# df_S10_SG1['director'] = df_S10_SG1['director'].apply(lambda x: x.replace('Warring', 'Waring'))
+df_S10_SG1
 
 # %%
 df_director_S10_SG1 = df_S10_SG1['director']
 df_director_S10_SG1
 # %%
-df_essai_sep = df_scenarist_S10_SG1.str.split(pat=(' & |, '))
+df_essai_sep = df_S10_SG1['scenarist'].str.split(pat=(' & |, '))
 df_essai_sep
 df_essai_sep[1][0]
-
-# %%
