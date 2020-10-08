@@ -9,17 +9,17 @@ from S03_SGA_pd import df_S03_SGA
 
 # %%
 df_SG1 = df_S08_SG1.append(df_S09_SG1).reset_index(drop= True)
-df_SG1
+#df_SG1
 
 # %%
 df_SG1 = df_SG1.append(df_S10_SG1).reset_index(drop=True)
-df_SG1
+#df_SG1
 # %%
 df_stargate = df_SG1.append(df_S01_SGA).reset_index(drop=True)
-df_stargate
+#df_stargate
 # %%
 df_stargate = df_stargate.append(df_S02_SGA).reset_index(drop=True)
-df_stargate
+#df_stargate
 
 # %%
 df_stargate = df_stargate.append(df_S03_SGA).reset_index(drop=True)
