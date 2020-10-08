@@ -36,6 +36,27 @@ df_diffusion_dates = df_diffusion_dates.drop_duplicates().sort_values().reset_in
 df_diffusion_dates
 # %%
 df_directors = df_stargate['director']
-df_directors = df_directors.drop_duplicates().sort_values().reset_index(drop=True)
+df_directors = df_directors.drop_duplicates().sort_values().reset_index(drop=True).rename('name')
 df_directors
+# %%
+df_scenarists = df_stargate['scenarist']
+df_scenarists = df_scenarists.apply(lambda x: x.replace('P&er DeLuise', 'Peter DeLuise'))
+df_scenarists = df_scenarists.drop_duplicates().sort_values().reset_index(drop=True)
+df_scenarists = df_scenarists.apply(lambda x: x.replace(' et ', ' & '))
+df_scenarists = df_scenarists.apply(lambda x: x.replace(' &  ', ' & '))
+df_scenarists = df_scenarists.apply(lambda x: x.replace(' &', ','))
+df_scenarists
+# %%
+name_list = []
+for name in df_scenarists :
+  names = name.split(', ')
+  for n in names :
+    name_list.append(n)
+name_list
+# %%
+df_scenarists = pd.Series(name_list, name='name')
+df_scenarists = df_scenarists.apply(lambda x: x.replace(' Brad Wright', 'Brad Wright'))
+df_scenarists = df_scenarists.apply(lambda x: x.replace('Jospeh Mallozzi', 'Joseph Mallozzi'))
+df_scenarists = df_scenarists.drop_duplicates().sort_values().reset_index(drop=True)
+df_scenarists
 # %%

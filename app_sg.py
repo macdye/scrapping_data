@@ -1,7 +1,5 @@
 from fastapi import FastAPI
 import uvicorn
-from bson.objectid import ObjectId
-from typing import List, Optional
 import psycopg2
 from fastapi.responses import JSONResponse
 
@@ -23,18 +21,53 @@ async def get_all_episodes():
 	episodes = cursor.fetchall()
 	episode_list = []
 	for episode in episodes:
-		episode_list.append({"id":episode[0], "serie":episode[1], "title":episode[2], "epi_num":episode[3]})
+		episode_list.append({"id":episode[0], "diffusion_id":episode[1], "serie_id":episode[2], "scenarist_id":episode[3], "director_id":episode[4], "us_audience":episode[5], "fr_audience":episode[6], "epi_num":episode[7], "titre":episode[8]})
 	return JSONResponse(episode_list)
 
 
-@app.get("/staff")
-async def get_all_staff():
-	cursor.execute("""SELECT * FROM staff;""")
-	staff = cursor.fetchall()
-	staff_list = []
-	for people in staff:
-		staff_list.append({"id":people[0], "epi_id":people[1], "realisateur":people[2], "scenariste":people[3]})
-	return JSONResponse(staff_list)
+@app.get("/scenarists")
+async def get_all_scenarists():
+	cursor.execute("""SELECT * FROM scenarists;""")
+	scenarists = cursor.fetchall()
+	scenarists_list = []
+	for people in scenarists:
+		scenarists_list.append(
+			{"id": people[0], "name": people[1]})
+	return JSONResponse(scenarists_list)
+
+
+@app.get("/directors")
+async def get_all_directors():
+	cursor.execute("""SELECT * FROM directors;""")
+	directors = cursor.fetchall()
+	directors_list = []
+	for people in directors:
+		directors_list.append(
+			{"id": people[0], "name": people[1]})
+	return JSONResponse(directors_list)
+
+
+@app.get("/series")
+async def get_all_series():
+	cursor.execute("""SELECT * FROM series;""")
+	series = cursor.fetchall()
+	series_list = []
+	for serie in series:
+		series_list.append(
+			{"id": serie[0], "name": serie[1]})
+	return JSONResponse(series_list)
+
+
+@app.get("/diffusion_dates")
+async def get_all_diffusion_dates():
+	cursor.execute("""SELECT * FROM diffusion_dates;""")
+	diffusion_dates = cursor.fetchall()
+	diffusion_dates_list = []
+	for date in diffusion_dates:
+		diffusion_dates_list.append(
+			{"id": date[0], "date": str(date[1])})
+	return JSONResponse(diffusion_dates_list)
+
 
 # @app.get("/audiences")
 # async def get_all_audiences():

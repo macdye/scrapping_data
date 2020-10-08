@@ -63,13 +63,6 @@ df_S10_SG1
 df_S10_SG1['audience_fr'] = df_S10_SG1['audience_fr'].apply(lambda x: x.replace('Indisponible.', 'NA'))
 df_S10_SG1
 
-#%%
-# df_S10_SG1['director'] = df_S10_SG1['director'].apply(lambda x: x.replace('And', 'Andy'))
-# df_S10_SG1['director'] = df_S10_SG1['director'].apply(lambda x: x.replace('Woeste', 'F. Woeste'))
-# df_S10_SG1['director'] = df_S10_SG1['director'].apply(lambda x: x.replace('Will', 'William'))
-# df_S10_SG1['director'] = df_S10_SG1['director'].apply(lambda x: x.replace('Warring', 'Waring'))
-df_S10_SG1
-
 # %%
 df_director_S10_SG1 = df_S10_SG1['director']
 df_director_S10_SG1
